@@ -1,0 +1,213 @@
+/* 
+  Kebab Box - Animations & Special Transitions
+*/
+
+/* 1. Splash Screen Slide Up */
+@keyframes slideUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+    visibility: hidden;
+  }
+}
+
+/* 2. Fire Glow for Logo (Varying intensities) */
+@keyframes fireGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px rgba(240, 90, 34, 0.45)) 
+            drop-shadow(0 0 20px rgba(230, 62, 23, 0.25))
+            drop-shadow(0 0 35px rgba(255, 162, 31, 0.15));
+  }
+  50% {
+    filter: drop-shadow(0 0 16px rgba(240, 90, 34, 0.8)) 
+            drop-shadow(0 0 30px rgba(230, 62, 23, 0.5))
+            drop-shadow(0 0 50px rgba(255, 162, 31, 0.3));
+    transform: scale(1.02);
+  }
+}
+
+/* 3. Flame Tongues Flickering behind Logo */
+@keyframes flameFlicker {
+  0%, 100% {
+    transform: scaleY(1) scaleX(1) skewX(-2deg);
+    opacity: 0.85;
+    border-radius: 50% 50% 35% 35% / 60% 60% 40% 40%;
+  }
+  25% {
+    transform: scaleY(1.08) scaleX(0.96) skewX(2deg);
+    opacity: 0.95;
+    border-radius: 45% 45% 38% 38% / 55% 55% 45% 45%;
+  }
+  50% {
+    transform: scaleY(0.93) scaleX(1.04) skewX(-1deg);
+    opacity: 0.9;
+    border-radius: 52% 52% 32% 32% / 65% 65% 35% 35%;
+  }
+  75% {
+    transform: scaleY(1.15) scaleX(0.92) skewX(3deg);
+    opacity: 1;
+    border-radius: 48% 48% 36% 36% / 58% 58% 42% 42%;
+  }
+}
+
+/* 4. Individual Ember Sparks Rising */
+@keyframes floatEmber {
+  0% {
+    transform: translateY(100vh) translateX(0) scale(1) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-20vh) translateX(var(--drift-x, 40px)) scale(0) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* 5. SVG Drawing Animation */
+@keyframes strokeDraw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Logo Reveal for splash image */
+@keyframes logoReveal {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* 6. General Fades & Slides */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+/* 7. Active Status Pulse (Green & Red Banners) */
+@keyframes statusPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(74, 222, 128, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0);
+  }
+}
+
+@keyframes statusPulseClosed {
+  0% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(239, 68, 68, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+  }
+}
+
+/* 8. WhatsApp Wave Pulse */
+@keyframes whatsappRadar {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 12px rgba(37, 211, 102, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+/* 9. Floating Item Micro-Movement */
+@keyframes subtleFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* 10. Shimmer effect on checkout CTA button */
+@keyframes ctaShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* 11. Scale in checkmarks */
+@keyframes popIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  80% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Animation classes to be used in elements */
+.anim-slide-up {
+  animation: slideUp 0.8s cubic-bezier(0.85, 0, 0.15, 1) forwards;
+}
+
+.anim-fire-glow {
+  animation: fireGlow 3s ease-in-out infinite;
+}
+
+.anim-fade-in {
+  animation: fadeIn 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.anim-float {
+  animation: subtleFloat 4s ease-in-out infinite;
+}

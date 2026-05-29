@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kebab Box | Clean, Fresh, High-Quality QSR Kebabs in Bangalore</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Welcome to Kebab Box, Bangalore's premier QSR brand serving fresh, hygienic, never-frozen chicken kebabs. Prepared daily, cooked over flame without compromises. Explore our 5 flavored rubs!">
+  <meta name="keywords" content="kebab box, kabab box bangalore, fresh kababs bangalore, hygienic chicken kebab, QSR bangalore, seekh kebab, chicken lollipop, peri peri kebab, goli soda bangalore">
+  <meta name="author" content="Kebab Box India">
+  
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Kebab Box | Clean, Fresh, High-Quality QSR Kebabs in Bangalore">
+  <meta property="og:description" content="Experience crispy golden-fried fresh kebabs and signature lollipops with 5 signature flavors. Prepared daily with sunflower oil and zero palm oil.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kebabbox.in">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- --- 1. INTRO SPLASH OVERLAY WITH DYNAMIC FIRE ANIMATION --- -->
+  <div id="splash-overlay">
+    <!-- Moving ember canvas background -->
+    <canvas class="splash-canvas-bg" id="splash-canvas"></canvas>
+    
+    <!-- Fire animation behind logo -->
+    <div class="flame-backing"></div>
+    
+    <div class="splash-content">
+      <div class="splash-logo-container">
+        <img src="assets/images/logo.png" alt="Kebab Box Logo" class="splash-logo">
+      </div>
+      <div class="splash-tagline">Flavor in Every Box</div>
+      <div class="splash-subtitle">Clean • Fresh • High Quality</div>
+    </div>
+    <button class="skip-intro-btn" id="skip-splash-btn">Skip Intro</button>
+  </div>
+
+  <!-- --- 2. FLOATING WHATSAPP BUTTON --- -->
+  <div class="whatsapp-float" onclick="redirectToWhatsApp()" title="Chat with Kebab Box">
+    <!-- WhatsApp Simple SVG Icon -->
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.458L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.859-4.407 9.862-9.824.002-2.623-1.013-5.09-2.861-6.941-1.846-1.85-4.307-2.87-6.932-2.87-5.438 0-9.862 4.407-9.865 9.825-.001 1.761.467 3.479 1.355 5.011l-.995 3.636 3.738-.978L6.647 19.16zM17.47 15.2c-.28-.14-1.65-.815-1.905-.907-.254-.093-.44-.14-.625.14-.185.28-.717.907-.88 1.092-.162.186-.325.21-.605.07-.28-.14-1.182-.435-2.251-1.39-1.053-.94-1.36-1.745-1.565-2.03-.2-.284-.021-.438.12-.577.126-.127.28-.326.421-.49.14-.163.188-.28.28-.465.093-.186.047-.35-.023-.49-.07-.14-.625-1.507-.857-2.064-.225-.54-.452-.467-.625-.477-.16-.008-.344-.01-.528-.01-.185 0-.485.07-.74.35-.254.28-1.053 1.03-1.053 2.51 0 1.48 1.077 2.913 1.227 3.114.15.2 2.122 3.24 5.14 4.545.717.31 1.277.495 1.713.633.722.23 1.378.198 1.897.12.578-.087 1.65-.675 1.883-1.326.23-.65.23-1.207.162-1.325-.07-.11-.25-.2-.53-.34z"/>
+    </svg>
+    <span class="whatsapp-text">Chat on WhatsApp</span>
+  </div>
+
+  <!-- --- 3. HEADER & STICKY GLASSMORPHIC NAVIGATION --- -->
+  <header>
+    <div class="container header-container">
+      <a href="#home" class="logo-link">
+        <img src="assets/images/logo.png" alt="Kebab Box Logo">
+      </a>
+      
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#promise">Our Promise</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#locations">Locations</a></li>
+          <li><a href="#franchise">Franchise</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      
+      <div class="header-actions">
+        <a href="#menu" class="btn-primary">Order Now</a>
+        <button class="mobile-menu-btn" onclick="toggleMobileNav(true)" title="Open Menu" style="margin-left: 8px;">
+          <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- --- 4. HERO BANNER --- -->
+  <section id="home">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" style="margin-right: 4px;">
+            <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+            <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+          Now Serving Across Bangalore
+        </div>
+        <h1 class="hero-title">
+          Clean. Fresh.<br><span>High-Quality</span> Kebabs.
+        </h1>
+        <p class="hero-description">
+          Welcome to Kebab Box, where culinary hygiene meets crispy, golden-fried kebab flavors. 100% fresh chicken prepared daily, zero palm oil, and no artificial additives. Served hot in our hygienic boxes.
+        </p>
+        <div class="hero-actions">
+          <a href="#menu" class="btn-primary" style="padding: 14px 32px; font-size: 1rem;">Explore Menu</a>
+          <a href="#promise" class="btn-outline" style="padding: 14px 32px; font-size: 1rem;">Our Hygiene Standard</a>
+        </div>
+        
+        <div class="hero-partners">
+          <h4 class="partners-title">Order from your favorite platforms</h4>
+          <div class="partners-row">
+            <a href="https://www.zomato.com/bangalore/kebab-box-1-hebbal-bangalore/order" target="_blank" class="platform-btn btn-zomato" title="Order Kebab Box on Zomato">
+              <span class="platform-name">Zomato</span>
+            </a>
+            <a href="https://www.swiggy.com/city/bangalore/kebab-box-ayyappa-layout-hebbal-rest1186238" target="_blank" class="platform-btn btn-swiggy" title="Order Kebab Box on Swiggy">
+              <span class="platform-name">Swiggy</span>
+            </a>
+            <a href="https://www.swiggy.com/city/bangalore/kebab-box-ayyappa-layout-hebbal-rest1186238" target="_blank" class="platform-btn btn-ownly" title="Order Kebab Box on Ownly">
+              <span class="platform-name">Ownly</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hero-image-wrapper">
+        <div class="hero-circle-bg"></div>
+        <img src="assets/images/hero_kebab.jpg" alt="Crispy Fried Kebabs" class="hero-food-img anim-float">
+        
+        <!-- Floating Badges -->
+        <div class="floating-badge badge-1">
+          <div class="badge-icon">🌿</div>
+          <div class="badge-text">
+            <h4>Sunflower Oil Only</h4>
+            <p>0% Palm Oil Compromise</p>
+          </div>
+        </div>
+        <div class="floating-badge badge-2">
+          <div class="badge-icon">🔥</div>
+          <div class="badge-text">
+            <h4>Never Frozen</h4>
+            <p>100% Fresh Daily Preparation</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- 5. THE KEBAB BOX PROMISE (ABOUT US) --- -->
+  <section class="section section-bg-dark" id="promise">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">THE KEBAB BOX PROMISE</span>
+        <h2 class="section-title">Quality Without Compromise</h2>
+        <p class="section-description">
+          We believe high-speed dining should never sacrifice quality and safety. We stand by these 6 core parameters for every box served.
+        </p>
+      </div>
+      
+      <div class="promise-grid">
+        <!-- Promise Card 1 -->
+        <div class="promise-card">
+          <div class="promise-icon-wrapper">🍗</div>
+          <h3>Fresh Chicken</h3>
+          <p>We source premium quality, tender poultry daily. Our chicken is never frozen, ensuring succulent textures and natural juices in every bite.</p>
+        </div>
+        
+        <!-- Promise Card 2 -->
+        <div class="promise-card">
+          <div class="promise-icon-wrapper">🌻</div>
+          <h3>No Palm Oil</h3>
+          <p>Your health is our utmost priority. We fry and baste exclusively with premium sunflower oil, eliminating cheap palm oil substitutes entirely.</p>
+        </div>
+        
+        <!-- Promise Card 3 -->
+        <div class="promise-card">
+          <div class="promise-icon-wrapper">🧪</div>
+          <h3>No Artificial Colours</h3>
+          <p>That stunning reddish-orange charred hue? It comes entirely from real Kashmiri chillies and natural spice rubs. No chemical dyes permitted.</p>
+        </div>
+        
+        <!-- Promise Card 4 -->
+        <div class="promise-card">
+          <div class="promise-icon-wrapper">🧂</div>
+          <h3>No Ajinomoto</h3>
+          <p>We say no to MSG and artificial taste enhancers. We rely solely on natural, traditional marination, herbs, and spices to deliver deep flavor profiles.</p>
+        </div>
+        
+        <!-- Promise Card 5 -->
+        <div class="promise-card">
+          <div class="promise-icon-wrapper">🍳</div>
+          <h3>Oil Changed Daily</h3>
+          <p>No rancid, recycled oil. Our sunflower cooking oil is discarded and replaced fresh every single morning to guarantee lightness and clean digestion.</p>
+        </div>
+        
+        <!-- Promise Card 6 -->
+        <div class="promise-card">
+          <div class="promise-icon-wrapper">🧼</div>
+          <h3>Clean & Hygienic</h3>
+          <p>From UV-sanitized kitchen prep surfaces to touchless, sealed boxes, safety is our standard. Our kitchens observe rigorous sanitization procedures.</p>
+        </div>
+      </div>
+      
+      <div class="banner-promise">
+        <h3>Clean • Fresh • High-Quality</h3>
+        <p>That is the Kebab Box Promise. Freshness without shortcuts, flavor without chemicals.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- 6. DYNAMIC PRODUCTS MENU --- -->
+  <section class="section" id="menu">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">OUR PRODUCTS MENU</span>
+        <h2 class="section-title">The Kebab Box Kitchen</h2>
+        <p class="section-description">
+          Select from our simple, highly perfected menu. Choose your style, weights, and toppings, and add custom items directly to your cart.
+        </p>
+      </div>
+      
+      <div class="menu-controls">
+        <button class="filter-btn active" onclick="document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active')); this.classList.add('active'); renderMenu('all')">All Items</button>
+        <button class="filter-btn" onclick="document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active')); this.classList.add('active'); renderMenu('kebabs')">Kebabs</button>
+        <button class="filter-btn" onclick="document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active')); this.classList.add('active'); renderMenu('lollipops')">Lollipops</button>
+        <button class="filter-btn" onclick="document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active')); this.classList.add('active'); renderMenu('drinks')">Drinks & Dips</button>
+      </div>
+      
+      <div class="menu-grid" id="menu-grid-container">
+        <!-- Rendered dynamically by menu.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- --- 7. BANGALORE OUTLETS LOCATIONS --- -->
+  <section class="section section-bg-dark" id="locations">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">BANGALORE OUTLETS</span>
+        <h2 class="section-title">Find Your Nearest Box</h2>
+        <p class="section-description">
+          We operate modern, highly clean kitchen outlets across Bangalore. Check active open hours and visit us or order direct.
+        </p>
+      </div>
+      
+      <div class="locations-grid" id="locations-grid-container">
+        <!-- Rendered dynamically by locations.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- --- 8. FRANCHISE PARTNERSHIP MODULE --- -->
+  <section class="section" id="franchise">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">FRANCHISE OPPORTUNITY</span>
+        <h2 class="section-title">Grow With Kebab Box</h2>
+        <p class="section-description">
+          Become a partner in Bangalore's fastest-growing hygienic QSR brand. Our streamlined kitchen ops and high demand deliver incredible returns.
+        </p>
+      </div>
+      
+      <div class="franchise-grid">
+        <div class="franchise-benefits">
+          <div class="benefit-item">
+            <div class="benefit-num">1</div>
+            <div class="benefit-content">
+              <h4>Low Operational Complexity</h4>
+              <p>Our standardized recipes, pre-blended premium marinades, and training program mean you do not need master-chef staff to run high outputs.</p>
+            </div>
+          </div>
+          
+          <div class="benefit-item">
+            <div class="benefit-num">2</div>
+            <div class="benefit-content">
+              <h4>Hygienic Authority Branding</h4>
+              <p>Post-pandemic customers demand kitchen transparency. Kebab Box's high safety reputation is a powerful magnet for discerning local families.</p>
+            </div>
+          </div>
+          
+          <div class="benefit-item">
+            <div class="benefit-num">3</div>
+            <div class="benefit-content">
+              <h4>Optimized Supply Chain</h4>
+              <p>Daily direct supply of premium quality fresh chicken and sunflower oil through our Bangalore logistics partners, minimizing storage waist.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- --- HIDDEN IFRAME FOR BACKGROUND SUBMISSION --- -->
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(typeof submitted !== 'undefined' && submitted) { handleFormSuccess(); } else if(typeof contactSubmitted !== 'undefined' && contactSubmitted) { handleContactSuccess(); }"></iframe>
+
+        <div class="franchise-form-container">
+          <!-- Step Progress Bar -->
+          <div class="step-indicator" style="display: flex; justify-content: space-between; margin-bottom: 30px; position: relative;">
+            <div class="step-indicator-line" style="position: absolute; top: 18px; left: 0; width: 100%; height: 2px; background: rgba(255,255,255,0.05); z-index: 1;"></div>
+            <div class="step-indicator-item active" data-step="1" style="position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; flex: 1;">
+              <span class="step-circle" style="width: 38px; height: 38px; border-radius: 50%; background: var(--bg-card); border: 2px solid var(--text-muted); display: flex; align-items: center; justify-content: center; font-weight: 700; font-family: var(--font-heading); color: var(--text-muted); transition: var(--transition-fast);">1</span>
+              <span class="step-text" style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; color: var(--text-muted); margin-top: 8px; letter-spacing: 0.05rem;">Contact</span>
+            </div>
+            <div class="step-indicator-item" data-step="2" style="position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; flex: 1;">
+              <span class="step-circle" style="width: 38px; height: 38px; border-radius: 50%; background: var(--bg-card); border: 2px solid var(--text-muted); display: flex; align-items: center; justify-content: center; font-weight: 700; font-family: var(--font-heading); color: var(--text-muted); transition: var(--transition-fast);">2</span>
+              <span class="step-text" style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; color: var(--text-muted); margin-top: 8px; letter-spacing: 0.05rem;">Profile</span>
+            </div>
+            <div class="step-indicator-item" data-step="3" style="position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; flex: 1;">
+              <span class="step-circle" style="width: 38px; height: 38px; border-radius: 50%; background: var(--bg-card); border: 2px solid var(--text-muted); display: flex; align-items: center; justify-content: center; font-weight: 700; font-family: var(--font-heading); color: var(--text-muted); transition: var(--transition-fast);">3</span>
+              <span class="step-text" style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; color: var(--text-muted); margin-top: 8px; letter-spacing: 0.05rem;">Alignment</span>
+            </div>
+          </div>
+
+          <form id="google-franchise-form" action="https://docs.google.com/forms/d/e/1FAIpQLSeaIloTWHNX29-kXdgbSSlVQITDVSW6Kp8RA9QnII9qz-dSwA/formResponse" method="POST" target="hidden_iframe" onsubmit="handleFranchiseSubmit();">
+            
+            <!-- STEP 1: CONTACT INFORMATION -->
+            <div class="step-panel active" data-step="1">
+              <h3 class="form-title" style="margin-bottom: 20px;">Step 1: Contact Details</h3>
+              <div class="form-grid">
+                <div class="form-group form-full">
+                  <label for="fran-name">Full Name *</label>
+                  <input type="text" name="entry.1032071155" id="fran-name" class="form-control" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                  <label for="fran-phone">Phone Number *</label>
+                  <input type="tel" name="entry.446907645" id="fran-phone" class="form-control" placeholder="10-digit mobile number" required>
+                </div>
+                <div class="form-group">
+                  <label for="fran-email">Email ID *</label>
+                  <input type="email" name="entry.1542565881" id="fran-email" class="form-control" placeholder="name@domain.com" required>
+                </div>
+                <div class="form-group">
+                  <label for="fran-city">City *</label>
+                  <input type="text" name="entry.1978462072" id="fran-city" class="form-control" placeholder="e.g. Bangalore" required>
+                </div>
+                <div class="form-group">
+                  <label for="fran-area">Location Interested In (Area) *</label>
+                  <input type="text" name="entry.800835665" id="fran-area" class="form-control" placeholder="e.g. Jayanagar" required>
+                </div>
+              </div>
+              <div class="form-actions-row" style="margin-top: 24px; display: flex; justify-content: flex-end;">
+                <button type="button" class="btn-primary" onclick="nextStep()" style="padding: 10px 28px; width: auto;">Next Step →</button>
+              </div>
+            </div>
+
+            <!-- STEP 2: BUSINESS PROFILE -->
+            <div class="step-panel" data-step="2" style="display: none;">
+              <h3 class="form-title" style="margin-bottom: 20px;">Step 2: Business Profile</h3>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="fran-budget">Investment Budget *</label>
+                  <input type="text" name="entry.1938673855" id="fran-budget" class="form-control" placeholder="Enter your investment budget (e.g. 20 Lakhs)" required>
+                </div>
+                <div class="form-group">
+                  <label for="fran-funds">Immediate Funds Access? *</label>
+                  <select name="entry.1442053630" id="fran-funds" class="form-control" required style="background-color: var(--bg-card); cursor: pointer;">
+                    <option value="" disabled selected>Select option</option>
+                    <option value="Yes">Yes</option>
+                    <option value="Will arrange within 1-2 months">Will arrange within 1-2 months</option>
+                    <option value="Exploring loan options">Exploring loan options</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="fran-run-biz">Ever Run a Business? *</label>
+                  <select name="entry.1773832296" id="fran-run-biz" class="form-control" required style="background-color: var(--bg-card); cursor: pointer;">
+                    <option value="" disabled selected>Select option</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="fran-franchisee">Been a Franchise Partner? *</label>
+                  <select name="entry.760064374" id="fran-franchisee" class="form-control" required style="background-color: var(--bg-card); cursor: pointer;">
+                    <option value="" disabled selected>Select option</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+                </div>
+                <div class="form-group form-full">
+                  <label for="fran-timeline">Timeline to Start *</label>
+                  <select name="entry.714916666" id="fran-timeline" class="form-control" required style="background-color: var(--bg-card); cursor: pointer;">
+                    <option value="" disabled selected>Select timeline</option>
+                    <option value="Immediately">Immediately</option>
+                    <option value="1-3 Months">1-3 Months</option>
+                    <option value="3-6 Months">3-6 Months</option>
+                    <option value="Just Exploring Now">Just Exploring Now</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-actions-row" style="margin-top: 24px; display: flex; justify-content: space-between; gap: 16px;">
+                <button type="button" class="btn-outline" onclick="prevStep()" style="padding: 10px 24px; width: auto;">← Back</button>
+                <button type="button" class="btn-primary" onclick="nextStep()" style="padding: 10px 28px; width: auto;">Next Step →</button>
+              </div>
+            </div>
+
+            <!-- STEP 3: PARTNERSHIP ALIGNMENT -->
+            <div class="step-panel" data-step="3" style="display: none;">
+              <h3 class="form-title" style="margin-bottom: 20px;">Step 3: Brand Alignment</h3>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="fran-model">Do you prefer FOCO Model? *</label>
+                  <select name="entry.2138663432" id="fran-model" class="form-control" required style="background-color: var(--bg-card); cursor: pointer;">
+                    <option value="" disabled selected>Select model</option>
+                    <option value="Yes, I want the company to operate it (FOCO Model)">Yes, I want FOCO (Company Operated)</option>
+                    <option value="No, I will manage the outlet personally">No, I will manage it personally</option>
+                    <option value="I will invest and hire a manager to run it">I will invest and hire a manager</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="fran-source">How did you hear about us? *</label>
+                  <select name="entry.394445443" id="fran-source" class="form-control" required style="background-color: var(--bg-card); cursor: pointer;">
+                    <option value="" disabled selected>Select option</option>
+                    <option value="Instagram">Instagram</option>
+                    <option value="Facebook">Facebook</option>
+                    <option value="Existing Outlet">Existing Outlet</option>
+                    <option value="Referral">Referral</option>
+                    <option value="Google">Google</option>
+                  </select>
+                </div>
+                <div class="form-group form-full">
+                  <label for="fran-motivation">What motivates you to start this business? *</label>
+                  <textarea name="entry.1192676229" id="fran-motivation" class="form-control" placeholder="Share your motivation details..." required style="min-height: 80px;"></textarea>
+                </div>
+                <div class="form-group form-full">
+                  <label for="fran-interests">What interests you most about Kebab Box? *</label>
+                  <textarea name="entry.720187637" id="fran-interests" class="form-control" placeholder="What caught your interest?" required style="min-height: 80px;"></textarea>
+                </div>
+              </div>
+              <div class="form-actions-row" style="margin-top: 24px; display: flex; justify-content: space-between; gap: 16px;">
+                <button type="button" class="btn-outline" onclick="prevStep()" style="padding: 10px 24px; width: auto;">← Back</button>
+                <button type="submit" id="btn-fran-submit" class="btn-primary" style="padding: 10px 28px; width: auto; background: linear-gradient(135deg, var(--brand-red) 0%, var(--brand-orange) 100%);">Submit Application ✓</button>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- 9. GENERAL CONTACT --- -->
+  <section class="section section-bg-dark" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">CONNECT WITH US</span>
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-description">
+          Have queries about corporate catering, bulk packaging, or feedback on your delivery? Drop us a line.
+        </p>
+      </div>
+      
+      <div class="contact-grid">
+        <div class="contact-info-column">
+          <h3 style="font-size: 1.4rem;">Corporate Head Office</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: -16px;">Kebabs Box QSR Private Limited, Bangalore, Karnataka.</p>
+          
+          <ul class="contact-info-list">
+            <li class="contact-info-card">
+              <div class="contact-info-icon">📍</div>
+              <div class="contact-info-content">
+                <h4>Registered Address</h4>
+                <p>Sri Krishna Rukmini Complex, 5th Cross Rd, opp. Hmt Play Ground, AK Colony, RT Nagar, Bengaluru, Karnataka 560032</p>
+              </div>
+            </li>
+            
+            <li class="contact-info-card">
+              <div class="contact-info-icon">✉️</div>
+              <div class="contact-info-content">
+                <h4>Support Email</h4>
+                <p>kebabboxindia@gmail.com</p>
+              </div>
+            </li>
+            
+            <li class="contact-info-card">
+              <div class="contact-info-icon">📞</div>
+              <div class="contact-info-content">
+                <h4>Helpline</h4>
+                <p>+91 99012 19116 (4 PM - 11 PM)</p>
+              </div>
+            </li>
+          </ul>
+          
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <h4 style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600; letter-spacing: 0.1rem;">Follow Kebab Box</h4>
+            <div class="social-links" style="display: flex; gap: 12px;">
+              <a href="https://www.facebook.com/profile.php?id=61578809737491" target="_blank" class="social-btn" title="Facebook" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.05); color: var(--text-light); transition: all 0.3s ease;" onmouseover="this.style.background='#1877F2'; this.style.color='#fff';" onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.color='var(--text-light)';">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="display: block;">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </a>
+              <a href="https://www.instagram.com/kebabboxindia/" target="_blank" class="social-btn" title="Instagram" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.05); color: var(--text-light); transition: all 0.3s ease;" onmouseover="this.style.background='linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)'; this.style.color='#fff';" onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.color='var(--text-light)';">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="display: block;">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="franchise-form-container" id="contact-form-container">
+          <h3 class="form-title">Send Customer Message</h3>
+          <form id="general-contact-form" action="https://docs.google.com/forms/d/e/1FAIpQLSfvGdlkKDThl9NVii-Lo1m9KwWGbiFH0VXvpDNccuk4e4IX5w/formResponse" method="POST" target="hidden_iframe" onsubmit="handleContactSubmit();">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="contact-name">Your Name *</label>
+                <input type="text" name="entry.31069557" id="contact-name" class="form-control" placeholder="Enter name" required>
+              </div>
+              <div class="form-group">
+                <label for="contact-email">Email Address *</label>
+                <input type="email" name="entry.133323400" id="contact-email" class="form-control" placeholder="name@domain.com" required>
+              </div>
+              <div class="form-group form-full">
+                <label for="contact-message">Your Message *</label>
+                <textarea name="entry.493894977" id="contact-message" class="form-control" placeholder="How can we help you today?" required style="min-height: 120px;"></textarea>
+              </div>
+              <button type="submit" id="btn-contact-submit" class="btn-form-submit form-full">
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- MOBILE STICKY BOTTOM ORDER ACTION DOCK --- -->
+  <div class="mobile-sticky-dock">
+    <a href="https://www.zomato.com/bangalore/kebab-box-1-hebbal-bangalore/order" target="_blank" class="dock-btn btn-zomato" title="Order Kebab Box on Zomato">
+      <span>Order on Zomato</span>
+    </a>
+    <a href="https://www.swiggy.com/city/bangalore/kebab-box-ayyappa-layout-hebbal-rest1186238" target="_blank" class="dock-btn btn-swiggy" title="Order Kebab Box on Swiggy">
+      <span>Order on Swiggy</span>
+    </a>
+  </div>
+
+  <!-- --- 13. FOOTER COMPONENT --- -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col footer-about">
+        <!-- Logo svg in footer -->
+        <a href="#home" class="logo-link" style="margin-bottom: 20px;">
+          <img src="assets/images/logo.png" alt="Kebab Box Logo">
+        </a>
+        <p>Hygienic, premium quality crispy chicken kebabs and lollipop boxes served hot. Prepared fresh daily with zero frozen compromises.</p>
+      </div>
+      
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#promise">The Promise</a></li>
+          <li><a href="#menu">Products Menu</a></li>
+          <li><a href="#locations">Bangalore Locations</a></li>
+          <li><a href="#franchise">Franchise Portal</a></li>
+          <li><a href="#contact">Support Contact</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h3>Kitchen Hours</h3>
+        <div class="footer-hours-item">
+          <span class="day">Mon - Sun</span>
+          <span>4:00 PM - 11:00 PM</span>
+        </div>
+        <div class="footer-hours-item">
+          <span class="day">Dine-In/Pickup</span>
+          <span>4:00 PM - 11:00 PM</span>
+        </div>
+      </div>
+      
+      <div class="footer-col footer-newsletter">
+        <h3>Hygienic Updates</h3>
+        <p>Subscribe for exclusive vouchers, safety updates, and new flavour announcements.</p>
+        <form id="footer-newsletter-form" class="newsletter-form">
+          <input type="email" class="newsletter-input" placeholder="Enter your email" required>
+          <button type="submit" class="newsletter-btn">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M3.478 2.405a.75.75 0 00-.926.94l2.432 7.905H13.5a.75.75 0 010 1.5H4.984l-2.432 7.905a.75.75 0 00.926.94 60.519 60.519 0 0018.445-8.986.75.75 0 000-1.218A60.517 60.517 0 003.478 2.405z" />
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <div class="footer-copy">&copy; 2026 Kebab Box Private Limited. All Rights Reserved.</div>
+      <div style="color: var(--text-muted); font-size: 0.85rem;">Designed and Maintained with Quality &amp; Hygiene Standards.</div>
+    </div>
+  </footer>
+
+  <!-- --- MOBILE DRAWER OVERLAY --- -->
+  <div id="mobile-nav-drawer" class="mobile-drawer">
+    <div class="mobile-drawer-overlay" onclick="toggleMobileNav(false)"></div>
+    <div class="mobile-drawer-content">
+      <div class="mobile-drawer-header">
+        <img src="assets/images/logo.png" alt="Kebab Box Logo" style="max-height: 48px; width: auto;">
+        <button class="mobile-drawer-close" onclick="toggleMobileNav(false)">&times;</button>
+      </div>
+      <ul class="mobile-drawer-links">
+        <li><a href="#home" onclick="toggleMobileNav(false)">Home</a></li>
+        <li><a href="#promise" onclick="toggleMobileNav(false)">Our Promise</a></li>
+        <li><a href="#menu" onclick="toggleMobileNav(false)">Menu</a></li>
+        <li><a href="#locations" onclick="toggleMobileNav(false)">Locations</a></li>
+        <li><a href="#franchise" onclick="toggleMobileNav(false)">Franchise</a></li>
+        <li><a href="#contact" onclick="toggleMobileNav(false)">Contact</a></li>
+      </ul>
+      <div class="mobile-drawer-footer">
+        <a href="#menu" class="btn-primary" onclick="toggleMobileNav(false)" style="width: 100%; justify-content: center;">Order Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- --- 14. CORE LAYERS SCRIPTS --- -->
+  <script src="js/menu.js"></script>
+  <script src="js/locations.js"></script>
+  <script src="js/franchise.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

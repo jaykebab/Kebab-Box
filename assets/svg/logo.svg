@@ -1,0 +1,93 @@
+<svg viewBox="0 0 500 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Flame Gradient -->
+    <linearGradient id="flameGrad" x1="0%" y1="100%" x2="80%" y2="0%">
+      <stop offset="0%" stop-color="#e63e17" />
+      <stop offset="50%" stop-color="#f05a22" />
+      <stop offset="100%" stop-color="#ffa21f" />
+    </linearGradient>
+    
+    <!-- Glow Filter for Fire Effect -->
+    <filter id="logoGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <g id="kebab-box-logo">
+    <!-- --- KEBAB SECTION --- -->
+    <g id="kebab-text">
+      <!-- Flame 'K' - Left Wing (Flame Shape) -->
+      <path d="M 45 105 
+               C 15 90, 5 60, 25 35 
+               C 22 47, 28 55, 38 62 
+               C 35 48, 55 25, 82 35 
+               C 70 42, 68 53, 75 62 
+               C 92 78, 65 112, 45 105 Z" 
+            fill="url(#flameGrad)" />
+      
+      <!-- Flame 'K' - Inner lick of fire -->
+      <path d="M 48 95
+               C 32 85, 25 68, 35 52
+               C 34 58, 38 62, 44 65
+               C 42 56, 52 42, 68 48
+               C 60 52, 58 58, 62 65
+               C 72 75, 58 98, 48 95 Z" 
+            fill="#ffa21f" opacity="0.8" />
+      
+      <!-- K's Diagonal Branches (Crimson Red) -->
+      <path d="M 72 65 L 105 32 L 123 32 L 85 70 L 128 115 L 108 115 Z" fill="#d12626" />
+      
+      <!-- E (Crimson Red) -->
+      <path d="M 132 32 H 176 V 49 H 152 V 64 H 172 V 81 H 152 V 98 H 178 V 115 H 132 V 32 Z" fill="#d12626" />
+      
+      <!-- B (Crimson Red) -->
+      <path d="M 184 32 H 218 C 228 32, 235 37, 235 47 C 235 54, 230 59, 222 61 C 231 63, 237 68, 237 78 C 237 89, 228 94, 218 94 H 204 V 115 H 184 V 32 Z M 204 47 V 60 H 214 C 218 60, 220 58, 220 54 C 220 50, 218 47, 214 47 H 204 Z M 204 73 V 86 H 215 C 219 86, 221 84, 221 80 C 221 76, 219 73, 215 73 H 204 Z" fill="#d12626" />
+      
+      <!-- A (Crimson Red) -->
+      <path d="M 252 32 H 272 L 295 115 H 274 L 270 96 H 250 L 246 115 H 226 L 252 32 Z M 266 80 L 260 52 L 254 80 H 266 Z" fill="#d12626" />
+      
+      <!-- B (Crimson Red) -->
+      <path d="M 302 32 H 336 C 346 32, 353 37, 353 47 C 353 54, 348 59, 340 61 C 349 63, 355 68, 355 78 C 355 89, 346 94, 336 94 H 322 V 115 H 302 V 32 Z M 322 47 V 60 H 332 C 336 60, 338 58, 338 54 C 338 50, 336 47, 332 47 H 322 Z M 322 73 V 86 H 333 C 337 86, 339 84, 339 80 C 339 76, 337 73, 333 73 H 322 Z" fill="#d12626" />
+      
+      <!-- TM (Crimson Red) -->
+      <path d="M 362 33 H 378 V 37 H 371 V 48 H 368 V 37 H 362 V 33 Z M 380 33 H 384 L 387 43 L 390 33 H 394 V 48 H 391 V 37 L 388 47 H 386 L 382 37 V 48 H 380 V 33 Z" fill="#d12626" />
+    </g>
+
+    <!-- --- BOX SECTION --- -->
+    <g id="box-text" transform="translate(196, 120)">
+      <!-- B (Crimson Red) -->
+      <path d="M 52 8 H 86 C 96 8, 103 13, 103 23 C 103 30, 98 35, 90 37 C 99 39, 105 44, 105 54 C 105 65, 96 70, 86 70 H 72 V 91 H 52 V 8 Z M 72 23 V 36 H 82 C 86 36, 88 34, 88 30 C 88 26, 86 23, 82 23 H 72 Z M 72 49 V 62 H 83 C 87 62, 89 60, 89 56 C 89 52, 87 49, 83 49 H 72 Z" fill="#d12626" />
+      
+      <!-- O - The Rounded Orange Box with Chicken Leg -->
+      <g id="orange-box-o" transform="translate(112, 8)">
+        <!-- Rounded Orange Rect -->
+        <rect x="0" y="0" width="54" height="83" rx="14" fill="#f05a22" />
+        
+        <!-- White Chicken Drumstick -->
+        <path d="M 23 20 
+                 C 15 20, 10 26, 10 34
+                 C 10 44, 18 55, 23 60 
+                 L 23 68
+                 C 20 69, 18 71, 18 73
+                 C 18 76, 21 78, 24 78
+                 C 25 78, 26 77, 27 76
+                 C 28 77, 29 78, 30 78
+                 C 33 78, 36 76, 36 73
+                 C 36 71, 34 69, 31 68
+                 L 31 60
+                 C 36 55, 44 44, 44 34
+                 C 44 26, 39 20, 31 20
+                 C 28 20, 25 21, 23 20 Z" 
+              fill="#ffffff" />
+        
+        <!-- Details on Drumstick (meat highlights) -->
+        <path d="M 18 32 C 20 30, 25 32, 27 35" stroke="#f05a22" stroke-width="2.5" stroke-linecap="round" />
+        <path d="M 17 40 C 19 38, 23 40, 25 43" stroke="#f05a22" stroke-width="2.5" stroke-linecap="round" />
+      </g>
+      
+      <!-- X (Crimson Red) -->
+      <path d="M 180 8 H 202 L 222 55 L 242 8 H 264 L 233 70 L 266 142 H 244 L 222 92 L 200 142 H 178 L 211 70 L 180 8 Z" fill="#d12626" />
+    </g>
+  </g>
+</svg>
