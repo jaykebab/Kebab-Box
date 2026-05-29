@@ -14,14 +14,14 @@ function initFranchiseForm() {
   if (!form) return;
   
   // Set up navigation buttons
-  updateFormSteps();
+  updateFormSteps(false);
 }
 
 function nextStep() {
   if (validateStep(currentStep)) {
     if (currentStep < totalSteps) {
       currentStep++;
-      updateFormSteps();
+      updateFormSteps(true);
     }
   } else {
     showToast("Please fill out all required fields in this step.");
@@ -31,7 +31,7 @@ function nextStep() {
 function prevStep() {
   if (currentStep > 1) {
     currentStep--;
-    updateFormSteps();
+    updateFormSteps(true);
   }
 }
 
@@ -57,7 +57,7 @@ function validateStep(step) {
   return isValid;
 }
 
-function updateFormSteps() {
+function updateFormSteps(shouldScroll = false) {
   // Show/Hide panels
   document.querySelectorAll('.step-panel').forEach(panel => {
     const stepNum = parseInt(panel.getAttribute('data-step'));
@@ -76,9 +76,11 @@ function updateFormSteps() {
   });
   
   // Scroll form into view if needed
-  const formContainer = document.querySelector('.franchise-form-container');
-  if (formContainer) {
-    formContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  if (shouldScroll) {
+    const formContainer = document.querySelector('.franchise-form-container');
+    if (formContainer) {
+      formContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
   }
 }
 
